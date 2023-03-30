@@ -3,11 +3,9 @@ const router = express.Router();
 const AuthController = require("../controllers/AuthController");
 
 
-router.get("/", BooksController.index);
-router.get("/:id", BooksController.showBook);
-router.post("/", BooksController.store);
-router.put("/:id", BooksController.edit);
-router.delete("/:id", BooksController.delete);
+router.post("/login", AuthController.login);
+router.post("/cadastro", AuthController.store);
+
 
 
 
